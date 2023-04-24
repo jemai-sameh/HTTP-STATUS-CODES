@@ -27,7 +27,7 @@ The HTTP status codes are completely different from the basic explanation above,
 
 >- **3xx-Request Redirect codes**
 
->- **4xx-Request Incomplete**
+>- **4xx-Request Incomplete *" CLient Error "***
 
 >- **5xx-Server Errors**
 
@@ -36,7 +36,9 @@ The HTTP status codes are completely different from the basic explanation above,
 ![The cycle of the status codes!](/HTTP-Status-Codes-1.png)
 
 
-#### 1. successful request
+#### 1. 1xx-Informational codes
+
+#### 2. 2xx-Request successful codes
 
 - ***200 OK*** – The request was successful.
 
@@ -51,7 +53,7 @@ The HTTP status codes are completely different from the basic explanation above,
 - ***205 Reset Content*** – ​​The server requests to reset submitted information, such as form data.
 
 
-#### 2. Redirects
+#### 3. 3xx-Request Redirect codes
 
 
 - ***300 Multiple Choices***- Response indicating requested content has been moved or more options match the request.
@@ -71,7 +73,7 @@ The HTTP status codes are completely different from the basic explanation above,
 - ***206 Partial content*** – ​​Successful request response for only part of the document.
 
 
-#### 3. Client Errors
+#### 4. 4xx-Request Incomplete *" CLient Error "*
 
 - ***400 Bad Request*** – The server did not understand the request.
 
@@ -108,7 +110,7 @@ The HTTP status codes are completely different from the basic explanation above,
 - ***417 Expectation Failed*** - The server was unable to respond to requests sent in the "Expect" header field.
 
 
-#### 4. Server Errors
+#### 5. 5xx-Server Errors
 
 - ***500 Internal Server Error*** - General error message means something went wrong, but more specific information could not be sent.
 
@@ -123,7 +125,7 @@ The HTTP status codes are completely different from the basic explanation above,
 - ***505 HTTP Version Not Supported*** – The server does not support the HTTP protocol used by the client for the request.
 
 
-****Below, I will provide a summary of the specific status codes definitions used in reference to the accompanying photo.****
+****The photo below provides a summary of the HTTP status codes.****
 ![The status codes!](/HTTP-Status-Codes-2.png)
 
 
