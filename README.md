@@ -38,7 +38,7 @@ The HTTP status codes are completely different from the basic explanation above,
 
 #### 1. 1xx-Informational codes
 
-- ***100 Continue*** - part of the request was received by the server, but until it is rejected, the client continues with the request.
+- ***100 Continue*** - Only a part of the request has been received by the server, but as long as it has not been rejected, the client should continue with the request.
 
 - ***101 Switching Protocols*** - The server is changing the protocol.
 
