@@ -38,6 +38,12 @@ The HTTP status codes are completely different from the basic explanation above,
 
 #### 1. 1xx-Informational codes
 
+- ***100 Continue*** - part of the request was received by the server, but until it is rejected, the client continues with the request.
+
+- ***101 Switching Protocols*** - The server is changing the protocol.
+
+- ***102 Processing*** 
+
 #### 2. 2xx-Request successful codes
 
 - ***200 OK*** – The request was successful.
@@ -48,9 +54,20 @@ The HTTP status codes are completely different from the basic explanation above,
 
 - ***203 Unauthorized Information*** – The request was successful, but the information sent to the client regarding the response came from a third-party server.
 
-- ***204 No Content*** – ​​The request was successful but no data was returned. 
+- ***204 No Content*** – The request was successful but no data was returned. 
 
-- ***205 Reset Content*** – ​​The server requests to reset submitted information, such as form data.
+- ***205 Reset Content*** – The server requests to reset submitted information, such as form data.
+
+- ***206 Partial Content*** – Successful request response for only part of the document.
+
+- ***207 Multi-Status*** 
+
+- ***208 Already Reported*** 
+
+- ***226 IM Used*** 
+
+
+
 
 
 #### 3. 3xx-Request Redirect codes
@@ -64,13 +81,14 @@ The HTTP status codes are completely different from the basic explanation above,
 
 - ***303 See Other (HTTP/1.1)*** – The requested document was found and responded with a URI where the document can currently be found.
  
-- ***304 Unmodified*** – The requested document has not changed since it was last requested. The client loads the document from the cache.
+- ***304 Not Modified*** – The requested document has not changed since it was last requested. The client loads the document from the cache.
 
-- ***305 Using a proxy*** – The requested document can only be accessed through a specific proxy.
+- ***305 Use Proxy*** – The requested document can only be accessed through a specific proxy.
 
 - ***307 Temporary Redirect (HTTP/1.1)*** – The requested document could be temporarily found at a different URI, provided in the response. This is a purer version of what 302 usually means.
 
-- ***206 Partial content*** – ​​Successful request response for only part of the document.
+- ***308 Permanent Redirect*** 
+
 
 
 #### 4. 4xx-Request Incomplete *" CLient Error "*
@@ -78,6 +96,8 @@ The HTTP status codes are completely different from the basic explanation above,
 - ***400 Bad Request*** – The server did not understand the request.
 
 - ***401 Unauthorized*** - The client must be authorized before accessing, usually through some kind of login.
+
+- ***402 Payment Required*** -
 
 - ***403 Forbidden*** – Client does not have access to the requested document. If it appears on a document that should be, it could be a permissions issue.
 
@@ -95,19 +115,44 @@ The HTTP status codes are completely different from the basic explanation above,
 
 - ***410 Gone*** - Same as 404, except it means that the document has permanently disappeared from the URL and no new location is specified.
 
-- ***411 Request Length*** – The request was denied because the body length must be specified by the client.
+- ***411 Length Request*** – The request was denied because the body length must be specified by the client.
 
 - ***412 Precondition Failed*** – At least one condition of the request failed.
 
-- ***413 Request Entity Too Large***– The request is larger than the server can handle. A common example of this is if a file is submitted through a published form and is larger than the server settings allow for a message.
+- ***413 Payload Too Large***– The request is larger than the server can handle. A common example of this is if a file is submitted through a published form and is larger than the server settings allow for a message.
 
-- ***414 Request URI Too Long*** – URL is longer than the server can handle. The URL causing this error usually contains thousands of characters, so this is rarely a problem.
+- ***414 Request-URI Too Long*** – URL is longer than the server can handle. The URL causing this error usually contains thousands of characters, so this is rarely a problem.
 
 - ***415 Unsupported Media Type*** – Indicates that the format of at least part of the request is not supported.
 
 - ***416 Requested Range Not Satisfiable***– The request could not be met. Can happen if the client requests a part of the document that doesn't exist.
 
 - ***417 Expectation Failed*** - The server was unable to respond to requests sent in the "Expect" header field.
+
+- ***418 I'm a teapot*** -
+
+- ***421 Misdirected Request*** -
+
+- ***422 Unprocessable Entity*** -
+
+- ***423 Locked*** -
+
+- ***424 Failed Dependency*** -
+
+- ***426 Upgrade Required*** -
+
+- ***428 Precondition Required*** -
+
+- ***429 Too Many Requests*** -
+
+- ***431 Request Header Fields Too Large*** -
+
+- ***444 Connection Closed Without Response*** -
+
+- ***451 Unavailable For Legal Reasons*** -
+
+- ***499 Client Closed Request*** -
+
 
 
 #### 5. 5xx-Server Errors
@@ -123,6 +168,19 @@ The HTTP status codes are completely different from the basic explanation above,
 - ***504 Gateway Timeout***– The server acting as the gateway or proxy did not receive a response for the time the server was configured to wait for a response. 
 
 - ***505 HTTP Version Not Supported*** – The server does not support the HTTP protocol used by the client for the request.
+
+- ***506 Variant Also Negotiates*** -
+
+- ***507 Insufficient Storage*** -
+
+- ***508 Loop Detected*** -
+
+- ***510 Not Extended*** -
+
+- ***511 Network Authentication Required*** -
+
+- ***599 Network Connect Timeout Error*** -
+
 
 
 ****The photo below provides a summary of the HTTP status codes.****
