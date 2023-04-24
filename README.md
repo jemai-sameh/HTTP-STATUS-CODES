@@ -31,7 +31,10 @@ The HTTP status codes are completely different from the basic explanation above,
 
 >- **5xx-Server Errors**
 
-These are the status codes which are used.
+****This photo represent the cycle of the status codes which are used :****
+
+![The cycle of the status codes!](/HTTP-Status-Codes-1.png)
+
 
 #### 1. successful request
 
@@ -118,3 +121,9 @@ These are the status codes which are used.
 - ***504 Gateway Timeout***– The server acting as the gateway or proxy did not receive a response for the time the server was configured to wait for a response. 
 
 - ***505 HTTP Version Not Supported*** – The server does not support the HTTP protocol used by the client for the request.
+
+
+****Below, I will provide a summary of the specific status codes definitions used in reference to the accompanying photo.****
+![The status codes!](/HTTP-Status-Codes-2.png)
+
+
